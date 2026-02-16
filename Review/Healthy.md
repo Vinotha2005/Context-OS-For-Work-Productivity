@@ -6,6 +6,7 @@ effort, completion, learning, or forward movement.
 
 Healthy does NOT mean perfect.
 Healthy means something moved forward.
+- When the story starts as a healthy note- It can complete with healthy and/or unhealthy notes 
 
 ## Rules for Claude
 - Copy sentences exactly as written by the user
