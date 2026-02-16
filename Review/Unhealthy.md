@@ -6,6 +6,7 @@ avoidance, delay, stress, or breakdown.
 
 Unhealthy does NOT mean failure.
 It means something is not working.
+- When the story starts with unhealthy note and look for that story getting completed clearly and it can be healthy or unhealthy 
 
 ## Rules for Claude
 - Extract exact sentences only
