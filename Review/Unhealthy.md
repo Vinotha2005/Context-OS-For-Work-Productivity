@@ -23,3 +23,9 @@ It means something is not working.
 I planned to walk but I didn’t.
 I spoke angrily with my friend.
 
+## Definition
+Stores extracted sentences that indicate delay, avoidance, stress, confusion, or breakdown.
+
+## Rules
+Sentence-level extraction only
+No judgement or correction
