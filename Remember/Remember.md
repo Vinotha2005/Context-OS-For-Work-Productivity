@@ -1,12 +1,10 @@
-# Rewire – Habit Change
+## Purpose
+Remember stores repetition across time, not daily events.
+## Definition
+A log of behaviors or sentences that repeat across multiple dates.
 
-Rewire converts pain into action.
+## Rules
 
-Claude may write new content here.
-
-Structure:
-1. Problem sentence (copied from Recognise)
-2. Coach thinking (questions)
-3. Client thinking (honest answer)
-4. Small action step
-
+Only add when repetition is detected
+Include frequency
+No solutions
