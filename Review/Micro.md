@@ -21,3 +21,13 @@ physical or mental state.
 I felt tired the whole day.
 I skipped walking.
 
+## Definition
+Stores sentences related to body, mind, health, energy, emotions, or habits.
+
+## Scope
+Sleep
+Exercise
+Stress
+Focus
+
+Motivation
