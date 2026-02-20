@@ -1,353 +1,214 @@
-# Context-OS-For-Work-Productivity
-📘 Context-OS Journaling System
+📘 Context-OS: Claude-Based Journaling & Memory System
 
-(Review → Recognise → Remember → Rewire)
+This repository defines a structured journaling operating system that stores daily journals, segments them into thinking layers, recognizes patterns, remembers repetition, enables controlled habit change, and allows natural-language querying across time.
 
-This repository defines a structured journaling operating system designed to store daily journals, segment them logically, recognize patterns, remember long-term behaviors, and rewire habits using Claude + Git.
+The system uses:
 
-Claude’s role is not to replace journaling, but to store, segment, reason, and retrieve journals accurately over time.
+Claude as the reasoning and segmentation engine
 
-🧠 Core Philosophy
+GitHub as the permanent, versioned memory
 
-Journals are truth, not content to be polished
+Claude does not rewrite or summarize journals. It preserves original sentences and organizes them deterministically.
 
-Analysis must be traceable back to original writing
+🎯 System Goals
 
-Change comes after understanding
+Store daily natural-language journals
 
-The system is cyclical, not linear
+Preserve original wording as the source of truth
 
+Segment journals into clear thinking layers
+
+Track patterns over time
+
+Enable search and question answering across all journals
+
+Maintain traceability by date and file
+
+🔁 System Flow
 Review → Recognise → Remember → Rewire → Review
+
+This flow is cyclical, not linear.
+
+📂 Repository Structure
+journal/
+├── README.md
+├── Review/
+│   ├── Journaling.md
+│   ├── Healthy.md
+│   ├── Unhealthy.md
+│   ├── Macro.md
+│   ├── Micro.md
+│   └── Nano.md
+├── Recognise/
+│   ├── Existing painway.md
+│   ├── Existing pathway.md
+│   ├── Possible painway.md
+│   ├── Possible pathway.md
+│   ├── Macro,Micro,Nano.md
+│   └── High leverage outcome.md
+├── Remember/
+│   └── Remember.md
+└── Rewire/
+    └── Rewire.md
 1️⃣ REVIEW — Raw Journaling & First Classification
 Purpose
 
 The Review folder stores exact journal content and performs first-level classification only.
+No advice. No fixing. No rewriting.
 
-No fixing.
-No advice.
-No interpretation.
+Rules (Strict)
 
-📂 Review Folder Structure
-Review/
-├── Journaling.md
-├── Healthy.md
-├── Unhealthy.md
-├── Macro.md
-├── Micro.md
-└── Nano.md
-Journaling.md
-
-Definition
-Primary storage for all daily journals.
-
-Rules
-
-Journals are stored by date
-
-Content is saved exactly as written
-
-No sentence is removed or edited
-
-This file is append-only
-
-System Role
-
-Source of truth
-
-Used for audit, retrieval, and traceability
-
-All other files reference this content
-
-Healthy.md
-
-Definition
-Stores sentences that indicate stability, effort, progress, or constructive behavior.
-
-Rules
+Journals are stored exactly as written
 
 Sentence-level extraction only
 
-No emotional labels added
-
-No advice or encouragement
-
-Unhealthy.md
-
-Definition
-Stores sentences that indicate struggle, avoidance, stress, or breakdown.
-
-Rules
-
-Exact sentence copy
-
-No judgment or fixing language
-
-No future interpretation
-
-Macro.md
-
-Definition
-Stores sentences related to work, study, projects, goals, or responsibilities.
-
-Scope
-
-Tasks
-
-Output
-
-Planning
-
-Execution
-
-Micro.md
-
-Definition
-Stores sentences related to body, mind, emotions, and habits.
-
-Scope
-
-Energy
-
-Focus
-
-Health
-
-Mental state
-
-Nano.md
-
-Definition
-Stores sentences related to people, communication, and interaction.
-
-Scope
-
-Family
-
-Friends
-
-Conversations
-
-Social reactions
-
-Review Rules (Strict)
-
 One sentence may appear in multiple files
 
-No sentence may be rewritten
+Macro/Micro/Nano exist only in Review
 
-Review never suggests change
+Files
 
-Review only records and classifies
+Journaling.md
+Primary storage for all daily journals, indexed by date. Append-only.
+
+Healthy.md
+Extracted sentences indicating effort, stability, learning, or progress.
+
+Unhealthy.md
+Extracted sentences indicating delay, stress, avoidance, or breakdown.
+
+Macro.md
+Sentences related to work, study, projects, goals, outcomes.
+
+Micro.md
+Sentences related to body, mind, health, energy, emotions, habits.
+
+Nano.md
+Sentences related to people, communication, and interactions.
 
 2️⃣ RECOGNISE — Awareness Without Fixing
 Purpose
 
-The Recognise folder transforms classified data into clear awareness.
-
-This stage answers:
-
-What pain already exists?
-
-What is currently working?
-
-What patterns are repeating?
-
-No action is taken here.
-
-📂 Recognise Folder Structure
-Recognise/
-├── Existing painway.md
-├── Existing pathway.md
-├── Possible painway.md
-├── Possible pathway.md
-├── Macro,Micro,Nano.md
-└── High leverage outcome.md
-Existing painway.md
-
-Definition
-Documents ongoing problems currently present.
+The Recognise folder transforms classified data into clear awareness without action.
 
 Rules
 
-Derived strictly from Review data
+Grounded in Review content
 
-No assumptions
+No rewriting of journals
 
-No future projection
+No motivation or solutions here
+
+Files
+
+Existing painway.md
+Current problems already present.
 
 Existing pathway.md
-
-Definition
-Documents behaviors or systems that are currently working.
-
-Rules
-
-Can include partial success
-
-Must be grounded in real journal evidence
+Behaviors or processes currently working (even partially).
 
 Possible painway.md
-
-Definition
-Describes how existing pain may continue if no change occurs.
-
-Rules
-
-Logical continuation only
-
-No fear-based or exaggerated language
+Logical continuation of pain if nothing changes.
 
 Possible pathway.md
-
-Definition
-Defines realistic, reachable positive directions.
-
-Rules
-
-Minimal and practical
-
-No motivational wording
-
-Must be achievable from current state
+Small, realistic positive direction available from the current state.
 
 Macro,Micro,Nano.md
-
-Definition
-Maps painways and pathways across life layers.
-
-Purpose
-
-Identify imbalance
-
-Understand where friction concentrates
+Maps where painways and pathways occur across life layers.
 
 High leverage outcome.md
+Single focus area that would reduce multiple painways.
 
-Definition
-Identifies the single focus area that would reduce multiple problems.
+3️⃣ REMEMBER — Long-Term Pattern Memory
+Purpose
+
+The Remember folder stores repetition across time, not daily events.
 
 Rules
 
-Not an action plan
+Added only when repetition is detected
 
-Used later by Rewire
+Includes frequency
 
-One outcome only
+No solutions or advice
 
-3️⃣ REMEMBER — Long-Term Memory Layer
-Purpose
-
-The Remember folder acts as the system’s long-term memory.
-
-It prevents forgetting patterns that repeat over weeks or months.
-
-📂 Remember Folder Structure
-Remember/
-└── Remember.md
 Remember.md
+Conservative, stable memory of recurring patterns.
 
-Definition
-Stores recurring behaviors, patterns, and missed actions across time.
+4️⃣ REWIRE — Controlled Habit Change (Optional)
+Purpose
+
+The Rewire folder designs small, controlled behavior changes after understanding is complete.
 
 Rules
 
-Aggregated over days/weeks
-
-No emotional tone
-
-No solutions
-
-System Role
-
-Historical reference
-
-Pattern persistence
-
-Used when answering questions like:
-
-“When did this start?”
-
-“How often does this repeat?”
-
-4️⃣ REWIRE — Controlled Change Layer
-Purpose
-
-The Rewire folder is where intentional change happens.
-
-Only after Review, Recognise, and Remember are complete.
-
-📂 Rewire Folder Structure
-Rewire/
-└── Rewire.md
-Rewire.md
-
-Definition
-Defines behavior change using small, controlled steps.
-
-Internal Structure of Rewire
-Coach Thinking
-
-System-level reasoning
-
-Identifies leverage points
-
-No blame
-
-Client Thinking
-
-Emotional resistance
-
-Real constraints
-
-Honest self-feedback
-
-Action Design
-
-Smallest possible steps
-
-Clear triggers
-
-Measurable behavior
-
-Rewire Rules
-
-No large goals
-
-No motivation talk
+Activated only when requested or clearly needed
 
 One change at a time
 
-Must connect to Recognise outcomes
+Actions must be minimal and concrete
 
-🤖 Claude + Git Usage Definition
-Claude’s Responsibilities
+Rewire.md
+Contains coach reasoning, client constraints, and small action steps.
+
+🔍 Query & Retrieval
+
+The system supports questions like:
+
+“When did I feel stressed?”
+
+“When did I work on a specific task?”
+
+“How often did this repeat?”
+
+Retrieval Rules
+
+Search Review → Recognise → Remember
+
+Match by meaning
+
+Return date, exact sentence, and source file
+
+Never rewrite historical content
+
+If no match exists, respond: “Not found in stored journals.”
+
+🤖 Claude Responsibilities
 
 Claude must:
 
-Store journals without rewriting
+Preserve original journal sentences
 
-Segment content accurately
+Follow folder definitions strictly
 
-Maintain folder discipline
+Maintain date indexing
 
-Answer questions by referencing original entries
+Commit updates safely to GitHub
 
-Claude must NOT:
+Claude must not:
 
-Summarize journals
+Summarize or improve language
 
-Replace human writing
+Invent content
 
-Inject advice early
+Mix folder responsibilities
 
-Git’s Role
+🗃️ GitHub as Memory
 
-Permanent memory
+GitHub acts as:
+
+Permanent storage
 
 Version history
 
-Trustable archive
+Audit trail
 
 External brain
 
-🎯 Final Principle
+Each daily journal and its processing results in a single, clear commit.
+
+🏁 Final Principle
+
+Journaling is treated as data, not content.
+Understanding comes before change.
+Memory grows over time, without losing truth.
