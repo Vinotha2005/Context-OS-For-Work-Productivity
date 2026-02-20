@@ -24,9 +24,14 @@ Claude may group related original sentences together.
 This is the ONLY place Claude may add one new sentence.
 That sentence must describe a small, realistic next action.
 
----
+## Purpose of Recognise
+Recognise identifies current reality without attempting change.
 
-## Mandatory Rule
+## It answers:
+What is working?
+What is causing pain?
+What may continue if unchanged?
+What small improvement is possible?
 
 If an Existing Painway exists,
 a Possible Pathway MUST be created.
