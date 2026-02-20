@@ -23,3 +23,10 @@ Healthy means something moved forward.
 I finished my assignment slowly.
 I attended the meeting even though I was tired.
 
+## Definition
+Stores extracted sentences that indicate progress, effort, learning, responsibility, or stability.
+
+## Rules
+Sentence must be copied verbatim
+No interpretation
+No aggregation
