@@ -1,0 +1,275 @@
+📘 Claude-Based Journaling, Memory & Query System
+
+(Complete Specification)
+
+1️⃣ SYSTEM OVERVIEW
+
+This system turns daily journaling into a structured, searchable, long-term memory using:
+
+Claude → reasoning + segmentation + retrieval
+
+GitHub → permanent, versioned storage
+
+The system replaces UI-based logic with definition-driven intelligence.
+
+2️⃣ COMPLETE SYSTEM FLOW
+User Journal Input
+→ Review (store & classify)
+→ Recognise (understand)
+→ Remember (retain patterns)
+→ Rewire (optional change)
+→ Query (answer any question)
+
+This flow is continuous and cyclical.
+
+3️⃣ QUERY ENGINE DEFINITION (VERY IMPORTANT)
+Purpose of Query Engine
+
+To allow the user to ask questions like:
+
+When did I feel stressed?
+
+When did I work on scraping?
+
+When did this habit start?
+
+How often did this repeat?
+
+Claude must answer only using stored journals, not guesses.
+
+Query Engine Rules
+
+When a question is asked, Claude must:
+
+Identify intent
+
+Emotion-based
+
+Activity-based
+
+Pattern-based
+
+Time-based
+
+Search in this order
+
+Review/Journaling.md
+
+Review/Healthy.md
+
+Review/Unhealthy.md
+
+Review/Macro.md
+
+Review/Micro.md
+
+Review/Nano.md
+
+Recognise/*
+
+Remember/Remember.md
+
+Match by meaning, not keywords only
+
+Return results with
+
+Date
+
+Exact sentence
+
+Source file
+
+Never rewrite historical text
+
+Query Output Rules
+
+Chronological order
+
+No summarization
+
+Optional frequency count
+
+No advice unless asked
+
+Query Failure Conditions
+
+Claude must say “Not found in stored journals” if:
+
+No matching sentence exists
+
+Date range is invalid
+
+Data has not been recorded yet
+
+4️⃣ VALIDATION RULES (QUALITY CONTROL)
+
+Before saving OR answering, Claude must validate:
+
+A. Journal Validation
+
+Date is present
+
+Journal text is non-empty
+
+Journal is stored only once per date
+
+B. Segmentation Validation
+
+No sentence rewritten
+
+No sentence invented
+
+Macro/Micro/Nano used only in Review
+
+Painway/Pathway used only in Recognise
+
+C. Git Validation
+
+Only relevant files modified
+
+No past data overwritten accidentally
+
+Commit message follows standard format
+
+D. Retrieval Validation
+
+Answers reference stored data
+
+Dates are accurate
+
+Source file is mentioned
+
+If validation fails → Claude must stop and ask the user.
+
+5️⃣ REMEMBER (LONG-TERM MEMORY LOGIC)
+Pattern Detection Rules
+
+A pattern is recorded only if:
+
+Same behavior or sentence appears across multiple dates
+
+Frequency is meaningful (not one-time)
+
+Remember is:
+
+Slow
+
+Conservative
+
+Stable
+
+It never reacts to one bad day.
+
+6️⃣ REWIRE (OPTIONAL CHANGE ENGINE)
+
+Rewire is activated only when:
+
+User explicitly asks for improvement
+
+OR pattern is clearly repeated over time
+
+Rewire focuses on:
+
+Small actions
+
+Environmental changes
+
+Habit triggers
+
+No motivation.
+No pressure.
+No goals.
+
+7️⃣ MIGRATION: STREAMLIT → CLAUDE-ONLY
+What Streamlit Did
+
+UI for input
+
+Local processing
+
+Temporary memory
+
+What Claude + Git Does
+
+Natural language input
+
+Intelligent reasoning
+
+Permanent memory
+
+Query across years
+
+Migration Steps
+
+Stop using Streamlit for logic
+
+Use Claude for:
+
+Journal intake
+
+Segmentation
+
+Pattern recognition
+
+Use GitHub as:
+
+Database
+
+Audit trail
+
+Memory store
+
+Keep UI optional (only for input)
+
+8️⃣ HOW TO PRESENT THIS AS A FINAL PROJECT
+Project Title
+
+Context-OS: A Claude-Driven Journaling and Memory System
+
+Problem Statement
+
+People write journals but cannot:
+
+Retrieve past thoughts easily
+
+Detect long-term patterns
+
+Understand behavior evolution
+
+Solution
+
+A Claude-powered journaling system that:
+
+Preserves original writing
+
+Structures thinking layers
+
+Enables long-term memory
+
+Allows natural language querying
+
+Key Innovation
+
+Journaling treated as data
+
+GitHub used as external brain
+
+Claude used as reasoning engine
+
+Technical Components
+
+Natural language processing
+
+File-based memory architecture
+
+Version-controlled cognition
+
+Semantic retrieval
+
+Outcome
+
+Personal thinking archive
+
+Behavior awareness system
+
+Scalable lifelong memory

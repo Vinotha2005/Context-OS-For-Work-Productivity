@@ -1,0 +1,229 @@
+🔄 Claude + GitHub Auto-Commit Workflow
+
+(Daily Journal → Process → Save → Query later)
+
+1. Goal of This Workflow
+
+To ensure that:
+
+Every daily journal is persistently saved
+
+All segmentation files are updated deterministically
+
+GitHub becomes the authoritative memory
+
+Claude can later read history and answer questions
+
+2. System Roles
+Claude
+
+Reasoning and segmentation engine
+
+Reads and writes files logically
+
+Decides what goes where based on definitions
+
+GitHub
+
+Permanent storage
+
+Version control
+
+Timeline of user’s thinking
+
+3. Trigger Conditions
+
+Claude performs a Git update when any of the following happen:
+
+User submits a new daily journal
+
+User edits an existing journal
+
+Claude completes a segmentation pass
+
+Claude updates Remember or Rewire
+
+User explicitly says “save” or “commit”
+
+4. Pre-Commit Validation (MANDATORY)
+
+Before committing, Claude must check:
+
+Date uniqueness
+
+No duplicate date blocks in Review/Journaling.md
+
+Sentence integrity
+
+No journal sentence modified
+
+Folder discipline
+
+Macro/Micro/Nano only in Review
+
+Painway/Pathway only in Recognise
+
+Traceability
+
+Every Recognise entry links back to Review content
+
+If validation fails → abort commit and ask user
+
+5. Commit Scope Rules
+
+Claude must:
+
+Modify only files affected by the current operation
+
+Never rewrite past unrelated dates
+
+Never reorder historical content
+
+6. Commit Granularity
+Single Journal Entry = One Commit
+
+Each date submission results in:
+
+1 commit
+
+All related file updates included together
+
+This guarantees:
+
+Clear timeline
+
+Easy rollback
+
+Accurate history
+
+7. Commit Message Format (STRICT)
+
+Claude must use structured commit messages.
+
+Format
+Added journal and processing for <DATE>
+Allowed Variations
+
+Updated journal for <DATE>
+
+Segmented journal for <DATE>
+
+Updated patterns from journals
+
+❌ No vague messages
+❌ No emotional language
+
+8. File Update Order (IMPORTANT)
+
+Claude must always update files in this order:
+
+Review/Journaling.md
+
+Review/Healthy.md
+
+Review/Unhealthy.md
+
+Review/Macro.md
+
+Review/Micro.md
+
+Review/Nano.md
+
+Recognise/*
+
+Remember/Remember.md (if needed)
+
+Rewire/Rewire.md (if requested)
+
+This preserves logical dependency.
+
+9. Editing Existing Journals
+
+If user edits a past date:
+
+Claude must:
+
+Locate the date block
+
+Replace only that date’s content
+
+Re-run Review + Recognise for that date
+
+Update Remember if patterns change
+
+Create a new commit noting the update
+
+10. Deleting Journals
+
+Deletion is explicit only.
+
+Claude must:
+
+Ask for confirmation
+
+Remove the date block
+
+Clean dependent Review/Recognise entries
+
+Commit with message:
+
+Deleted journal for <DATE>
+11. Reading for Question Answering
+
+When user asks questions like:
+
+“When did I do X?”
+
+“When was this pattern repeated?”
+
+“When did this process start?”
+
+Claude must:
+
+Read GitHub files (not memory guesses)
+
+Search by meaning across Review + Recognise + Remember
+
+Return:
+
+Date
+
+Exact sentence
+
+File path
+
+Git history may be used to:
+
+Detect first occurrence
+
+Detect change over time
+
+12. Failure Handling Rules
+
+Claude must STOP and ASK USER if:
+
+Date is missing
+
+Journal text is empty
+
+Commit would overwrite unrelated data
+
+Definitions are violated
+
+13. Why This Replaces Streamlit
+
+This workflow:
+
+Removes UI dependency
+
+Makes GitHub the database
+
+Makes Claude the reasoning engine
+
+Preserves long-term memory
+
+Enables powerful querying
+
+14. One-Line Explanation (Mentor-Ready)
+
+“Each daily journal is processed by Claude and committed to GitHub as structured memory, enabling long-term reasoning and retrieval.”
